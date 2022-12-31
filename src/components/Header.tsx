@@ -1,4 +1,4 @@
-import './header.module.scss';
+import './header.module.css';
 import todoLogo from '../assets/todoLogo.svg'
 
 export function Header(){
