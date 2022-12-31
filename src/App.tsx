@@ -1,5 +1,6 @@
 import { CreateTasks } from './components/CreateTasks'
 import { Header } from './components/Header'
+import { TasksContainer } from './components/TasksContainer'
 import './global.css'
 import './styles.module.css'
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <main>
         <CreateTasks />
+        <TasksContainer />
       </main>
     </div>
   )
