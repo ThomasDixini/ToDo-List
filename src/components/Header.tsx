@@ -1,9 +1,9 @@
-import './header.module.css';
+import styles from './header.module.css';
 import todoLogo from '../assets/todoLogo.svg'
 
 export function Header(){
     return(
-        <header>
+        <header className={styles.header}>
             <img src={todoLogo} alt="Logo" />
         </header>
     );
