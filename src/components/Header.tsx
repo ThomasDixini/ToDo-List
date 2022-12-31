@@ -1,9 +1,10 @@
 import './header.module.scss';
+import todoLogo from '../assets/todoLogo.svg'
 
 export function Header(){
     return(
         <header>
-            SJIAFJPKASPKPKOAS
+            <img src={todoLogo} alt="Logo" />
         </header>
     );
 }
