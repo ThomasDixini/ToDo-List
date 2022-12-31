@@ -8,6 +8,20 @@
     justify-content: space-between;
 }
 
+.tasksBox header > div:first-child strong{
+    color: var(--blue);
+}
+.tasksBox header > div:last-child strong{
+    color: var(--purple);
+}
+
+.tasksBox header > div > span {
+    background-color: var(--gray-400);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    margin-left: 0.25rem;
+}
+
 .content {
     display: flex;
     align-items: center;
