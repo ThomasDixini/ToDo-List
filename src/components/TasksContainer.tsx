@@ -1,5 +1,6 @@
 import styles from './tasksContainer.module.css';
 import listLogo from '../assets/listLogo.svg'
+import { BsTrash } from 'react-icons/bs'
 
 export function TasksContainer() {
 
@@ -11,7 +12,7 @@ export function TasksContainer() {
     const tasks: Task[] = [
         {
             id: 1,
-            content: 'Limpar e organizar o quarto'
+            content: 'Limpar e organizar o quarto asfsa jofajiosfjk ajklfjksajk~fajk~kfjajk~sfjkoajiofjiosajiosafji sakfkjsankfaknnkfsank' 
         },
         {
             id: 2,
@@ -45,7 +46,17 @@ export function TasksContainer() {
                         </>
                     ) : (
                         tasks.map((task) => {
-                            return <p> {task.content} </p>
+                            return (
+                                <article className={styles.task}>
+                                    <label htmlFor="checkbox" className={styles.checkboxContainer}> 
+                                        <input type="checkbox" className={styles.checkInput} id="checkbox" />
+                                        <span className={styles.checkmark}></span>
+                                    </label>
+                                    
+                                    <p> {task.content} </p>
+                                    <BsTrash size={20} />
+                                </article>
+                            );
                         })
                     )
                 }
