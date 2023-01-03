@@ -33,89 +33,15 @@
     border-radius: 8px;
 }
 
-.content p{
-    text-align: center;
-    color: var(--gray-300);
-}
-
 .content {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin: 2rem 0 4rem;
 }
 
-.task {
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    justify-items: start;
-    text-align: left;
-    width: 100%;
-    background-color: var(--gray-500); 
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid var(--gray-400);
-}
 
-.task svg {
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.task svg:hover {
-    color: var(--red);
-}
-
-/* ======================== CHECKBOX ======================= */
-
-.checkboxContainer {
-    background-color: var(--blue);
-    position: relative;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s all ease;
-}
-
-.checkInput {
-    width: 0;
-    opacity: 0;
-    height: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.checkmark::before {
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--gray-500);
-    transition: 0.4s all ease;
-}
-
-.checkInput:checked + .checkmark::before {
-    content: "\2713";
-    background-color: var(--purple);
-}
 
 
 
