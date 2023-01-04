@@ -1,41 +1,15 @@
 import styles from './tasksContainer.module.css';
 import listLogo from '../assets/listLogo.svg'
 
+import { TaskProp } from '../App';
 import { Task } from './Task';
 
-export function TasksContainer() {
 
-    interface Task {
-        id: string;
-        content: string;
-    }
+interface TasksContainerProps {
+    tasks: TaskProp[];
+}
 
-    const tasks: Task[] = [
-        {
-            id: "1",
-            content: 'Limpar e organizar o quarto asfsa jofajiosfjk ajklfjksajk~fajk~kfjajk~sfjkoajiofjiosajiosafji sakfkjsankfaknnkfsank',
-        },
-        {
-            id: "2",
-            content: 'Limpar e organizar o quarto Limpar e organizar o quarto Limpar e organizar o quartoLimpar e organizar o quarto Limpar e organizar o quarto',
-        },
-        {
-            id: "3",
-            content: 'Limpar e organizar o quarto Limpar e organizar o quarto Limpar e organizar o quartoLimpar e organizar o quarto Limpar e organizar o quarto',
-        },
-        {
-            id: "4",
-            content: 'Limpar e organizar o quarto Limpar e organizar o quarto Limpar e organizar o quartoLimpar e organizar o quarto Limpar e organizar o quarto',
-        },
-        {
-            id: "5",
-            content: 'Limpar e organizar o quarto Limpar e organizar o quarto Limpar e organizar o quartoLimpar e organizar o quarto Limpar e organizar o quarto',
-        },
-        {
-            id: "6",
-            content: 'Limpar e organizar o quarto Limpar e organizar o quarto Limpar e organizar o quartoLimpar e organizar o quarto Limpar e organizar o quarto',
-        },
-    ];
+export function TasksContainer({tasks}: TasksContainerProps) {
 
     const taskListIsEmpty = tasks.length == 0;
 
