@@ -14,6 +14,7 @@ function App() {
 
     const [tasks, setTasks] = useState<TaskProp[]>([]);
     const [taskInputValue, setTaskInputValue] = useState('');
+    
 
     function handleCreateNewTask() {
         setTasks([...tasks, {id: String(Math.random() * 10), content: taskInputValue}]);
@@ -24,12 +25,20 @@ function App() {
         setTaskInputValue(target.value);
     }
 
+    function handleDeleteTask(id: string) {
+      const taskToBeDeleted = tasks.filter(task => {
+          return task.id != id;
+      })
+
+      setTasks(taskToBeDeleted);
+    }
+
   return (
     <div className="App">
       <Header />
       <main>
         <CreateTasks getInputValue={handleGetInputValue} createNewTask={handleCreateNewTask}/>
-        <TasksContainer tasks={tasks}/>
+        <TasksContainer tasks={tasks} handleDeleteTask={handleDeleteTask}/>
       </main>
     </div>
   )

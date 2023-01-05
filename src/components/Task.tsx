@@ -4,9 +4,15 @@ import styles from './task.module.css'
 interface TaskProps {
     content: string;
     id: string;
+    deleteTask: (id: string) => void;
 }
 
-export function Task({content, id}: TaskProps) {
+export function Task({content, id, deleteTask}: TaskProps) {
+
+    function handleOnDeleteTask(id: string) {
+        deleteTask(id)
+    }
+
     return(
         <article className={styles.task}>
             <label htmlFor={id} className={styles.checkboxContainer}> 
@@ -15,7 +21,7 @@ export function Task({content, id}: TaskProps) {
             </label>
             
             <p> {content} </p>
-            <BsTrash size={20} />
+            <BsTrash size={20} onClick={() => handleOnDeleteTask(id)}/>
         </article>
     );
 }

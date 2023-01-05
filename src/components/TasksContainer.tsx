@@ -7,9 +7,10 @@ import { Task } from './Task';
 
 interface TasksContainerProps {
     tasks: TaskProp[];
+    handleDeleteTask: (id: string) => void;
 }
 
-export function TasksContainer({tasks}: TasksContainerProps) {
+export function TasksContainer({tasks, handleDeleteTask}: TasksContainerProps) {
 
     const taskListIsEmpty = tasks.length == 0;
 
@@ -38,7 +39,7 @@ export function TasksContainer({tasks}: TasksContainerProps) {
                     ) : (
                         tasks.map((task) => {
                             return (
-                                <Task content={task.content} id={task.id} />
+                                <Task content={task.content} id={task.id} deleteTask={handleDeleteTask}/>
                             );
                         })
                     )
