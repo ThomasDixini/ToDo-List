@@ -17,7 +17,9 @@ function App() {
     
 
     function handleCreateNewTask() {
+        event?.preventDefault()
         setTasks([...tasks, {id: String(Math.random() * 10), content: taskInputValue}]);
+        setTaskInputValue('');
     }
 
     function handleGetInputValue(e: FormEvent) {
@@ -37,7 +39,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <CreateTasks getInputValue={handleGetInputValue} createNewTask={handleCreateNewTask}/>
+        <CreateTasks getInputValue={handleGetInputValue} createNewTask={handleCreateNewTask} taskInputValue={taskInputValue}/>
         <TasksContainer tasks={tasks} handleDeleteTask={handleDeleteTask}/>
       </main>
     </div>

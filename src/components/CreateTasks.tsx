@@ -4,15 +4,16 @@ import { FormEvent, useState } from 'react'
 interface CreateTasksProps {
     getInputValue: (e: FormEvent) => void;
     createNewTask: () => void;
+    taskInputValue: string;
 }
 
-export function CreateTasks({getInputValue, createNewTask}: CreateTasksProps ){
+export function CreateTasks({getInputValue, createNewTask, taskInputValue}: CreateTasksProps ){
 
     return(
         <section>
-            <form action="">
-                <input type="text" placeholder="Adicione uma nova tarefa" onChange={getInputValue} />
-                <button type="button"onClick={createNewTask}> Criar </button>
+            <form action="" onSubmit={createNewTask}>
+                <input type="text" placeholder="Adicione uma nova tarefa" onChange={getInputValue} value={taskInputValue} required/>
+                <button type="submit" disabled={taskInputValue == '' ? true : false}> Criar </button>
             </form>
         </section>
     );
