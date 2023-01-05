@@ -31,15 +31,15 @@ export function TasksContainer({tasks, handleDeleteTask}: TasksContainerProps) {
                     taskListIsEmpty ? (
                         <>
                             <img src={listLogo} alt="Logo de Lista" />
-                            <p> 
+                            <div> 
                                 <strong>Você ainda não tem tarefas cadastradas</strong> 
                                 <p>Crie tarefas e organize seus itens a fazer</p>
-                            </p>
+                            </div>
                         </>
                     ) : (
                         tasks.map((task) => {
                             return (
-                                <Task content={task.content} id={task.id} deleteTask={handleDeleteTask}/>
+                                <Task key={task.id} content={task.content} id={task.id} deleteTask={handleDeleteTask}/>
                             );
                         })
                     )
