@@ -1,7 +1,9 @@
 section{
     margin-top: -2rem;
 }
+/*==================================================================*/
 
+/*====================== FORM ====================== */
 form {
     display: flex;
     justify-content: center;
@@ -14,6 +16,7 @@ input {
     height: 3.3rem;
     padding: 0.2rem 0.5rem;
     border-radius: 8px;
+
     background-color: var(--gray-500);
     color: var(--gray-300);
     font-size: 1rem;
@@ -24,16 +27,17 @@ button {
     height: 3.3rem;
     border: 0;
     border-radius: 8px;
+
     background-color: var(--blue-dark);
     font-weight: bold;
     color: var(--gray-100);
-
     transition: background-color 0.2s;
 }
 
 button:hover {
     background-color: var(--blue)
 }
+/*============================================ */
 
 
 

@@ -1,3 +1,4 @@
+/*====================== TASKBOX ======================*/
 .tasksBox {
     width: 100%;
     margin-top: 5rem;
@@ -16,19 +17,23 @@
 }
 
 .tasksBox header > div > span {
-    background-color: var(--gray-400);
+    margin-left: 0.25rem;
     padding: 0.3rem 0.8rem;
     border-radius: 1rem;
-    margin-left: 0.25rem;
-}
 
+    background-color: var(--gray-400);
+}
+/*==================================================================*/
+
+/*====================== CONTEÚDO DO TASKBOX ======================*/
 .content:not( article) {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    padding: 4rem 2rem;
+
     margin-top: 2rem;
+    padding: 4rem 2rem;
     border-top: 1px solid var(--gray-300);
     border-radius: 8px;
 }
@@ -37,9 +42,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     margin: 2rem 0 4rem;
     border: none ;
 }
+/*==================================================================*/
 
 
 

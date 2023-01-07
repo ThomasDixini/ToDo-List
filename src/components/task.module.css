@@ -1,14 +1,17 @@
+/* ======================== TASK ======================= */
 .task {
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     justify-items: start;
-    text-align: left;
-    width: 100%;
-    background-color: var(--gray-400); 
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid var(--gray-300);
+
     box-sizing: content-box;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    
+    background-color: var(--gray-400); 
+    text-align: left;
 }
 
 .task:has(label > .checkInput:checked) {
@@ -28,38 +31,43 @@
 .task svg:hover {
     color: var(--red);
 }
+/*==================================================================*/
 
 /* ======================== CHECKBOX ======================= */
 
 .checkboxContainer {
-    background-color: var(--blue);
-    position: relative;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    background-color: var(--blue);
     transition: 0.2s all ease;
+    cursor: pointer;
 }
 
 .checkInput {
     width: 0;
-    opacity: 0;
     height: 0;
+
+    opacity: 0;
 }
 
 .checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .checkmark::before {
@@ -67,9 +75,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 20px;
     height: 20px;
     border-radius: 50%;
+
     background-color: var(--gray-500);
     transition: 0.4s all ease;
 }
@@ -78,6 +88,7 @@
     content: "\2713";
     width: 24px;
     height: 24px;
+
     background-color: var(--purple);
 }
 

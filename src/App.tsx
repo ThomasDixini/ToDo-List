@@ -1,7 +1,9 @@
 import { FormEvent, useState } from 'react'
+
 import { CreateTasks } from './components/CreateTasks'
 import { Header } from './components/Header'
 import { TasksContainer } from './components/TasksContainer'
+
 import './global.css'
 import './styles.module.css'
 
@@ -31,7 +33,6 @@ function App() {
       const taskToBeDeleted = tasks.filter(task => {
           return task.id != id;
       })
-
       setTasks(taskToBeDeleted);
     }
 
@@ -39,8 +40,15 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <CreateTasks getInputValue={handleGetInputValue} createNewTask={handleCreateNewTask} taskInputValue={taskInputValue}/>
-        <TasksContainer tasks={tasks} handleDeleteTask={handleDeleteTask} />
+        <CreateTasks 
+          getInputValue={handleGetInputValue} 
+          createNewTask={handleCreateNewTask} 
+          taskInputValue={taskInputValue}
+        />
+        <TasksContainer 
+          tasks={tasks} 
+          handleDeleteTask={handleDeleteTask} 
+        />
       </main>
     </div>
   )
