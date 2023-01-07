@@ -8,17 +8,17 @@ import './styles.module.css'
 export interface TaskProp {
   id: string;
   content: string;
+  status: boolean;
 }
 
 function App() {
 
     const [tasks, setTasks] = useState<TaskProp[]>([]);
     const [taskInputValue, setTaskInputValue] = useState('');
-    
 
     function handleCreateNewTask() {
         event?.preventDefault()
-        setTasks([...tasks, {id: String(Math.random() * 10), content: taskInputValue}]);
+        setTasks([...tasks, {id: String(Math.random() * 10), content: taskInputValue, status: false}]);
         setTaskInputValue('');
     }
 
@@ -40,7 +40,7 @@ function App() {
       <Header />
       <main>
         <CreateTasks getInputValue={handleGetInputValue} createNewTask={handleCreateNewTask} taskInputValue={taskInputValue}/>
-        <TasksContainer tasks={tasks} handleDeleteTask={handleDeleteTask}/>
+        <TasksContainer tasks={tasks} handleDeleteTask={handleDeleteTask} />
       </main>
     </div>
   )

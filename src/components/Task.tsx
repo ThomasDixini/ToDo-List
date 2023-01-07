@@ -5,19 +5,20 @@ interface TaskProps {
     content: string;
     id: string;
     deleteTask: (id: string) => void;
+    handleChange: () => void
 }
 
-export function Task({content, id, deleteTask}: TaskProps) {
+export function Task({content, id, deleteTask, handleChange}: TaskProps) {
 
     function handleOnDeleteTask(id: string) {
         deleteTask(id)
     }
 
     return(
-        <article className={styles.task}>
-            <label htmlFor={id} className={styles.checkboxContainer}> 
-                <input type="checkbox" className={styles.checkInput} id={id} />
-                <span className={styles.checkmark}></span>
+        <article className={styles.task} >
+            <label  htmlFor={id} className={styles.checkboxContainer} > 
+                <input type="checkbox" className={styles.checkInput} id={id} onClick={handleChange}/>
+                <span className={styles.checkmark} ></span>
             </label>
             
             <p> {content} </p>
