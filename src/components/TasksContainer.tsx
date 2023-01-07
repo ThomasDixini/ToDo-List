@@ -24,7 +24,7 @@ export function TasksContainer({tasks, handleDeleteTask}: TasksContainerProps) {
             }
         })
         const taskConcluded = tasks.reduce((acc = 0, task) => {
-            if(task.status == true){
+            if(task != null && task.status == true){
                 return acc += 1;
             } else return acc;
         },0)
